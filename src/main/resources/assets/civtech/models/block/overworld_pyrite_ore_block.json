@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "civtech:block/overworld_pyrite_ore_block"
+  }
+}

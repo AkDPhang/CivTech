@@ -1,5 +1,5 @@
 {
-  "itemGroup.civtech": "Example Mod Tab",
-  "block.civtech.example_block": "Example Block",
-  "item.civtech.example_item": "Example Item"
+  "item.civtech.titanium": "Titanium",
+
+  "block.civtech.overworld_pyrite_ore_block": "Pyrite Ore"
 }

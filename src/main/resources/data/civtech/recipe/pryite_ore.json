@@ -1,0 +1,14 @@
+
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.7,
+  "group": "pyrite",
+  "ingredient": {
+    "item": "civtech:overworld_pyrite_ore_block"
+  },
+  "result": {
+    "id": "civtech:titanium"
+  }
+}

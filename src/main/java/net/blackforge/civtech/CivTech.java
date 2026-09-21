@@ -50,7 +50,6 @@ public class CivTech {
     public CivTech(IEventBus modEventBus, ModContainer modContainer) {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
-        modEventBus.addListener(CivTechDataGen::gatherData);
 
         // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (CivTech) to respond directly to events.

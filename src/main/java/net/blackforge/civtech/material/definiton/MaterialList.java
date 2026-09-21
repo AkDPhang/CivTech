@@ -14,7 +14,7 @@ public class MaterialList {
 
     private static final Logger LOGGER = LogUtils.getLogger();
 
-    public static final Material COPPER = register(new Material("copper", Set.of(MaterialForm.INGOT, MaterialForm.NUGGET, MaterialForm.DUST, MaterialForm.CRUSHED, MaterialForm.CONCENTRATE, MaterialForm.MATTE, MaterialForm.DROSS)));
+    public static final Material COPPER = register(new Material("copper", Set.of(MaterialForm.INGOT, MaterialForm.NUGGET)));
 
     public static Material register(Material material) {
         for(Material m : materials) {

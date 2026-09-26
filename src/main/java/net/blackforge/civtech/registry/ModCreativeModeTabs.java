@@ -21,10 +21,10 @@ public class ModCreativeModeTabs {
 
     //CivTech: Ores Creative Tab Register
     public static final Supplier<CreativeModeTab> CIVTECH_ORES = CREATIVE_MODE_TAB.register("civtech_ores_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.OVERWORLD_PYRITE_ORE_BLOCK.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(Items.STONE))
                     .title(Component.translatable("creativetab.civtech.civtech_ores"))
                     .displayItems(((itemDisplayParameters, output) -> {
-                        output.accept(ModBlocks.OVERWORLD_PYRITE_ORE_BLOCK);
+
                     })).build());
 
     //CivTech: Geology Creative Tab Register
@@ -33,7 +33,7 @@ public class ModCreativeModeTabs {
                     .withTabsBefore(ResourceLocation.fromNamespaceAndPath(CivTech.MODID, "civtech_ores_tab"))
                     .title(Component.translatable("creativetab.civtech.civtech_geology"))
                     .displayItems((itemDisplayParameters, output) ->  {
-                        output.accept(ModBlocks.OVERWORLD_PYRITE_ORE_BLOCK);
+
                     }).build());
 
 
@@ -53,7 +53,7 @@ public class ModCreativeModeTabs {
                     .withTabsBefore(ResourceLocation.fromNamespaceAndPath(CivTech.MODID, "civtech_materials_tab"))
                     .title(Component.translatable("creativetab.civtech.civtech_components"))
                     .displayItems(((itemDisplayParameters, output) -> {
-                        output.accept(ModBlocks.OVERWORLD_PYRITE_ORE_BLOCK);
+
                     })).build());
 
 

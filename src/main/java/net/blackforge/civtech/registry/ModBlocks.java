@@ -1,23 +1,35 @@
 package net.blackforge.civtech.registry;
 
 import net.blackforge.civtech.CivTech;
+import net.blackforge.civtech.geology.rock.definition.RockDefinitions;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.function.Supplier;
 
 public class ModBlocks {
 
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(CivTech.MODID);
 
-    public static final DeferredBlock<Block> OVERWORLD_PYRITE_ORE_BLOCK = registerBlock("overworld_pyrite_ore_block",
-            ()-> new Block(BlockBehaviour.Properties.of() .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+    public static final List<DeferredBlock<Block>> pebble_List = new ArrayList<>();
+
+    public static void registerGeologyBlocks() {
+        for(RockDefinitions rock : RockDefinitions.values()) {
+            String idName = rock.getName() + "_rock";
+
+            DeferredBlock<Block> pebble = registerBlock(idName,
+                    () -> new Block(BlockBehaviour.Properties.of()));
+
+            pebble_List.add(pebble);
+        }
+    }
 
 
 
@@ -34,6 +46,7 @@ public class ModBlocks {
     }
 
     public static void register(IEventBus eventBus) {
+        registerGeologyBlocks();
         BLOCKS.register(eventBus);
     }
 

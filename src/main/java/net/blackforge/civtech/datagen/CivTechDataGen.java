@@ -3,6 +3,7 @@ package net.blackforge.civtech.datagen;
 
 import net.blackforge.civtech.CivTech;
 import net.blackforge.civtech.datagen.lang.CivTechLangProvider;
+import net.blackforge.civtech.datagen.model.CivTechBlockStateProvider;
 import net.blackforge.civtech.datagen.model.CivTechItemModelProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
@@ -24,5 +25,7 @@ public class CivTechDataGen {
             generator.addProvider(event.includeClient(), new CivTechLangProvider(packOutput));
 
             generator.addProvider(event.includeClient(), new CivTechItemModelProvider(packOutput, existingFileHelper));
+
+            generator.addProvider(event.includeClient(), new CivTechBlockStateProvider(packOutput, existingFileHelper));
         }
 }

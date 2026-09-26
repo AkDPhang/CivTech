@@ -1,6 +1,7 @@
 package net.blackforge.civtech.datagen.model;
 
 import net.blackforge.civtech.CivTech;
+import net.blackforge.civtech.geology.rock.definition.RockDefinitions;
 import net.blackforge.civtech.material.Material;
 import net.blackforge.civtech.material.MaterialForm;
 import net.blackforge.civtech.material.definiton.MaterialList;
@@ -27,6 +28,7 @@ public class CivTechItemModelProvider extends ItemModelProvider {
 
             }
         }
+
     }
 
 }

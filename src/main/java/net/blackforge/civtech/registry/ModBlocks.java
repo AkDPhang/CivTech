@@ -1,6 +1,7 @@
 package net.blackforge.civtech.registry;
 
 import net.blackforge.civtech.CivTech;
+import net.blackforge.civtech.geology.rock.PebbleBlock;
 import net.blackforge.civtech.geology.rock.definition.RockDefinitions;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -22,10 +23,10 @@ public class ModBlocks {
 
     public static void registerGeologyBlocks() {
         for(RockDefinitions rock : RockDefinitions.values()) {
-            String idName = rock.getName() + "_rock";
+            String idName = rock.getName() + "_pebble";
 
             DeferredBlock<Block> pebble = registerBlock(idName,
-                    () -> new Block(BlockBehaviour.Properties.of()));
+                    () -> new PebbleBlock(rock, BlockBehaviour.Properties.of()));
 
             pebble_List.add(pebble);
         }

@@ -1,11 +1,16 @@
 package net.blackforge.civtech.datagen.lang;
 
 import net.blackforge.civtech.CivTech;
+import net.blackforge.civtech.geology.rock.PebbleBlock;
+import net.blackforge.civtech.geology.rock.definition.RockDefinitions;
 import net.blackforge.civtech.material.Material;
 import net.blackforge.civtech.material.MaterialForm;
 import net.blackforge.civtech.material.definiton.MaterialList;
 import net.minecraft.data.PackOutput;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.neoforge.common.data.LanguageProvider;
+import net.neoforged.neoforge.registries.DeferredBlock;
 
 public class CivTechLangProvider extends LanguageProvider {
 
@@ -20,6 +25,14 @@ public class CivTechLangProvider extends LanguageProvider {
         add("creativetab.civtech.civtech_geology", "CivTech: Geology");
         add("creativetab.civtech.civtech_materials", "CivTech: Materials");
         add("creativetab.civtech.civtech_components", "CivTech: Components");
+
+
+        for(RockDefinitions rock : RockDefinitions.values()) {
+            String idName = rock.getName() + "_pebble";
+            String text = rock.getName().substring(0,1).toUpperCase() + rock.getName().substring(1) + " Pebble";
+
+            add("block.civtech." + idName, text);
+        }
 
 
         for(Material material : MaterialList.getMaterials()) {

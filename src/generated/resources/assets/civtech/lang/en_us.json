@@ -1,4 +1,11 @@
 {
+  "block.civtech.basalt_pebble": "Basalt Pebble",
+  "block.civtech.chert_pebble": "Chert Pebble",
+  "block.civtech.granite_pebble": "Granite Pebble",
+  "block.civtech.limestone_pebble": "Limestone Pebble",
+  "block.civtech.obsidian_pebble": "Obsidian Pebble",
+  "block.civtech.quartzite_pebble": "Quartzite Pebble",
+  "block.civtech.sandstone_pebble": "Sandstone Pebble",
   "creativetab.civtech.civtech_components": "CivTech: Components",
   "creativetab.civtech.civtech_geology": "CivTech: Geology",
   "creativetab.civtech.civtech_materials": "CivTech: Materials",
